@@ -1,0 +1,103 @@
+.word {
+  &__error {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 500;
+  }
+  &__definition {
+    margin-bottom: 2rem;
+  }
+  &__meanings {
+    border-bottom: 1px solid var(--el-color);
+    margin-bottom: 2.5rem;
+  }
+  &__meaning {
+    margin-bottom: 2rem;
+  }
+  &__term {
+    font-weight: 700;
+    font-size: 72px;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 2.5rem;
+    position: relative;
+    font-size: 30px;
+    font-style: italic;
+    &Source {
+        font-size: 25px;
+        margin-bottom: 1rem;
+        &::after {
+            display: none;
+        }
+    }
+  }
+  &__line {
+    position: relative;
+    bottom: 17px;
+    background-color: var(--el-color);
+    height: 0.1px;
+    width: 100%;
+  }
+  &__partOfSpeech {
+    align-items: center;
+    display: inline-flex;
+    gap: 1.5rem;
+    width: 100%;
+  }
+  &__list {
+    position: relative;
+    left: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  &__item {
+    font-size: 18px;
+    font-weight: 500;
+    max-width: 100%;
+    &::marker {
+      color: #a445ed;
+      font-size: 20px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+  &__subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    &:first-child {
+        margin-bottom: 1.5rem;
+    }
+  }
+  &__phonetics {
+    color: var(--el-color);
+    font-size: 36px;
+  }
+  &__synonyms,
+  &__antonyms {
+    display: flex;
+    align-items: baseline;
+    column-gap: 1rem;
+  }
+  &__synonym,
+  &__antonym {
+    font-size: 20px;
+    color: #a445ed;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  &__source {
+    margin-top: 2rem;
+  }
+  &__link {
+    color: var(--txt-color);
+    letter-spacing: 0.05rem;
+  }
+  &__linkIcon {
+    position: relative;
+    top: 2px;
+    left: 10px;
+  }
+}

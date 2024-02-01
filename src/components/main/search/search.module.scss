@@ -1,0 +1,26 @@
+.search {
+    margin-bottom: 3rem;
+    &__label {
+        padding: 1.5rem 2rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        background-color: var(--inp-color);
+        border-radius: 30px;
+    }
+    &__input {
+        outline: none;
+        flex: 1;
+        margin-right: 2rem;
+        font-size: 24px;
+        background-color: var(--inp-color);
+        color: var(--txt-color);
+        border: none;
+    }
+    &__button {
+        background: none;
+        cursor: pointer;
+        border: none;
+        outline: none;
+    }
+}

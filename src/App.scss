@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    &[data-theme="light"] {
+        --bg-color: white;
+        --el-color: #808080;
+        --txt-color: black;
+        --inp-color: #C0C0C0;
+    }
+    &[data-theme="dark"] {
+        --bg-color: black;
+        --el-color: #A445ED;
+        --txt-color:#F5F5F5;
+        --inp-color:#1F1F1F;
+    }
+    color: var(--txt-color);
+    background-color: var(--bg-color);
+}
+
+.app {
+    max-width: 860px;
+    padding: 0 10px;
+    margin: 40px auto;
+
+}
+
