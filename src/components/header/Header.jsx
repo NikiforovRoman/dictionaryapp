@@ -4,6 +4,7 @@ import { IoMoon } from "react-icons/io5";
 import { IoSunny } from "react-icons/io5";
 import Switch from "react-switch";
 import s from "./header.module.scss";
+import Select from "./select/Select";
 
 const Header = ({theme, setTheme}) => {
   useEffect(() => {
@@ -22,10 +23,14 @@ const Header = ({theme, setTheme}) => {
         />
       </div>
       <div className={s.header__group}>
-        <select className={s.header__select}>
-          <option>Serif</option>
-          <option>Sans-serif</option>
-        </select>
+        <Select
+          defaultValue={'Font style'}
+          options={[
+            {value: 'Times New Roman', label: 'Times New Roman'},
+            {value: 'Roboto', label: 'Roboto'},
+            {value: 'Open Sans', label: 'Open Sans'} 
+          ]} 
+        />
         <div className={s.header__theme}>
           <Switch
             onChange={toggleTheme}

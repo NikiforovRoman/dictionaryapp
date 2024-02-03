@@ -8,7 +8,7 @@ const Search = ({theme, handleWords, value, setValue}) => {
     <section className={s.search}>
       <form onSubmit={handleWords}>
         <label className={s.search__label}>
-          <input className={s.search__input} value={value} placeholder='Type in the word...' onChange={(evt) => setValue(evt.target.value)}/>
+          <input className={`${s.search__input} search__input`} value={value} placeholder='Type in the word...' onChange={(evt) => setValue(evt.target.value)}/>
           <button className={s.search__button} type='submit'>
             <IoSearch size={30} color={theme === 'light' ? 'black' : '#A445ED'}/>
           </button>

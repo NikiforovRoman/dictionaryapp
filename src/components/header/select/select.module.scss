@@ -1,0 +1,15 @@
+.select {
+  &__options {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    border: none;
+    background-color: var(--inp-color);
+    color: var(--txt-color);
+    border-radius: 30px;
+    outline: none;
+    font-size: 16px;
+  }
+  &__option {
+    font-size: 16px;
+  }
+}
