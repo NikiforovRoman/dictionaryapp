@@ -1,13 +1,21 @@
-import React from "react";
+import {React, useRef} from "react";
 import s from "./wordData.module.scss";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { AiFillAudio } from "react-icons/ai";
 
 const Word = ({ words }) => {
-  console.log(words);
+
+  const ref = useRef();
+  const playAudio = () => {
+    ref.current.play();
+  }
+
   let phoneticData = "";
   words[0]?.phonetics?.forEach((phonetic) => {
     if (phonetic.text) phoneticData = phonetic.text;
   });
+  const audio = words[0]?.phonetics.find((phone) => phone.audio !== "")?.audio;
+
   return (
     <section className={s.word}>
       {words[0] === 404 ? (
@@ -16,10 +24,16 @@ const Word = ({ words }) => {
         words.length > 0 && (
           <div className={s.word__wrapper}>
             <div className={s.word__definition}>
-              <h2 className={s.word__term}>{words[0].word}</h2>
-              <p className={s.word__phonetics}>
-                {words[0].phonetic ? words[0].phonetic : phoneticData}
-              </p>
+              <div>
+                <h2 className={s.word__term}>{words[0].word}</h2>
+                <p className={s.word__phonetics}>
+                  {words[0].phonetic ? words[0].phonetic : phoneticData}
+                </p>
+              </div>
+              <button className={s.word__button} onClick={playAudio}>
+                <AiFillAudio size={25}/>
+              </button>
+              <audio className={s.word__hidden} ref={ref} src={audio} />
             </div>
 
             <div className={s.word__meanings}>

@@ -4,7 +4,13 @@
     font-size: 48px;
     font-weight: 500;
   }
+  &__hidden {
+    visibility: hidden;
+  }
   &__definition {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 2rem;
   }
   &__meanings {
@@ -32,6 +38,20 @@
         &::after {
             display: none;
         }
+    }
+  }
+  &__button {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: lighten(#a445ed, 20%);
+    color: darken(#a445ed, 10%);
+    transition: 0.4s;
+    &:hover {
+      background: darken(#a445ed, 10%);
+      color: lighten(#a445ed, 30%);
     }
   }
   &__line {
