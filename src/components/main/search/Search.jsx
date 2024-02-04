@@ -10,7 +10,7 @@ const Search = ({theme, handleWords, value, setValue}) => {
         <label className={s.search__label}>
           <input className={`${s.search__input} search__input`} value={value} placeholder='Type in the word...' onChange={(evt) => setValue(evt.target.value)}/>
           <button className={s.search__button} type='submit'>
-            <IoSearch size={30} color={theme === 'light' ? 'black' : '#A445ED'}/>
+            <IoSearch className={s.search__icon} size={30} color={theme === 'light' ? 'black' : '#A445ED'}/>
           </button>
         </label>
       </form>

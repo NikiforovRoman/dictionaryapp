@@ -18,6 +18,11 @@
         border: none;
         font-family: 'Times New Roman', Times, serif;
     }
+    &__icon {
+        @media (max-width: 400px) {
+            display: none;
+        }
+    }
     &__button {
         background: none;
         cursor: pointer;
