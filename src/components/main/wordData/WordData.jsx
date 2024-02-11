@@ -14,7 +14,7 @@ const Word = ({ words }) => {
   words[0]?.phonetics?.forEach((phonetic) => {
     if (phonetic.text) phoneticData = phonetic.text;
   });
-  const audio = words[0]?.phonetics.find((phone) => phone.audio !== "")?.audio;
+  const audio = words[0]?.phonetics?.find((phone) => phone.audio !== "")?.audio;
 
   return (
     <section className={s.word}>
